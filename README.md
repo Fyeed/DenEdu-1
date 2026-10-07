@@ -75,4 +75,13 @@ Audio hanya dianalisis sementara di browser selama sesi; audio tidak direkam, di
 
 Prototipe isyarat dan contoh pelafalan bersifat placeholder, bukan materi instruksi bahasa isyarat yang tervalidasi. Sesuaikan materi dengan kebutuhan anak, pendidik, serta bahasa dan komunitas setempat.
 
-Pada visualisasi mulut, pengguna dapat memilih langsung tombol **1 Siap**, **2 Gerak**, atau **3 Amati**. Saat tahap dipilih, animasi gerakan tahap tersebut langsung diputar singkat dan berhenti pada bentuk visual tahap itu. Panel “Cara menggerakkan bibir” memberi instruksi di setiap langkah dan ringkasan berubah mengikuti materi. Bentuk visual diselaraskan untuk beberapa gerak bibir bilabial dan vokal; kata/suku kata lainnya meminta pengguna mengikuti media atau pendamping, bukan menebak gerakan kata. Tombol putar menjalankan urutan, sementara jeda, ulang, dan berikutnya tetap tersedia. Ilustrasi merupakan skema tiga langkah, bukan model anatomi presisi atau petunjuk klinis. Gunakan arahan guru/terapis sebagai panduan.
+Pada visualisasi mulut, animasi kini ditenagai oleh library **Motion** (`motion`) dengan ilustrasi anatomis SVG yang diselaraskan secara akurat untuk setiap vokal (**A, I, U, E, O**), konsonan bilabial (**B, P, M**), suku kata, dan kata:
+- **Vokal A**: Rahang bawah turun ke bawah, rongga mulut terbuka lebar vertikal, lidah mendatar di dasar rongga, gigi atas tampak jelas.
+- **Vokal I**: Sudut bibir melebar mendatar (senyum rileks), gigi atas dan bawah berdekatan rapat sejajar, lidah terangkat ke depan langit-langit.
+- **Vokal U**: Bibir membulat dan mengerucut/mencucuk ke depan seperti corong kecil, gigi tertutup, rongga mulut terpusat di tengah.
+- **Vokal E**: Bukaan mulut sedang elips horizontal, sudut bibir agak melebar (transisi antara I dan A), gigi atas terlihat sebagian.
+- **Vokal O**: Bibir membulat lonjong terbuka rileks (lebih besar dari U), rahang sedikit turun, rongga mulut beresonansi bulat.
+- **Konsonan Bilabial (B, P, M)**: Bibir merapat rapat (closure) dengan letupan pelepasan (release) untuk B/P, atau dengungan nasal untuk M.
+- **Suku Kata**: Transisi halus dari posisi konsonan awal langsung menuju bentuk vokal target (A/I/U/E/O).
+
+Pengguna dapat memilih tombol **1 Siap**, **2 Gerak**, atau **3 Suara**, memutar animasi berulang dengan kecepatan normal/lambat, serta menekan chip vokal cepat (A · I · U · E · O) untuk langsung membandingkan bentuk artikulasi setiap vokal. Ilustrasi merupakan skema artikulasi edukatif untuk membantu mengamati dan meniru gerak mulut; ikuti arahan guru dan terapis sebagai panduan utama.
