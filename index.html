@@ -7,6 +7,7 @@
   <meta name="description" content="DENTUM-EDU — media pembelajaran artikulasi berbasis visual-taktil.">
   <title>DENTUM-EDU — Lihat, Tiru, Rasakan</title>
   <link rel="stylesheet" href="style.css">
+  <script src="js/vendor/motion.js" defer></script>
   <script src="js/core.js" defer></script>
   <script src="js/navigation.js" defer></script>
   <script src="js/materials.js" defer></script>
@@ -94,28 +95,131 @@
         <div class="detail-header"><div><p class="eyebrow" id="detail-category">KONSONAN BILABIAL</p><h1 id="detail-title">Belajar huruf <em>B</em></h1><p>Amati, pelajari, lalu coba bersama pendamping.</p></div><button class="star-button" id="detail-star" aria-label="Tandai materi">☆</button></div>
         <div class="detail-grid">
           <article class="panel sign-panel"><div class="panel-title"><div><p class="eyebrow">KOMUNIKASI VISUAL</p><h3>Foto / video isyarat</h3></div><span class="panel-counter">01 / 04</span></div><div class="sign-media-frame" id="sign-media-frame"><div class="sign-placeholder" id="sign-placeholder"><div class="sign-halo"></div><div class="sign-person"><div class="sign-head">🙂</div><div class="sign-body">🙌</div></div><span class="placeholder-label">Media gerakan belum ditambahkan</span></div><img id="sign-image" alt="" hidden><video id="sign-video" controls playsinline preload="metadata" aria-label="Video contoh gerakan bahasa isyarat" hidden></video></div><div class="segmented" role="group" aria-label="Pilihan bahasa isyarat"><button class="selected" data-sign="SIBI">SIBI</button><button data-sign="BISINDO">BISINDO</button></div><label class="sign-upload" for="sign-media-file"><span>＋</span><span><strong id="sign-upload-label">Tambahkan foto/video isyarat</strong><small>JPG, PNG, WebP, MP4, atau WebM · hanya di perangkat ini</small></span></label><input class="visually-hidden" id="sign-media-file" type="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/webm"><p class="caption" id="sign-media-caption">Media perlu divalidasi oleh penutur/pengajar SIBI atau BISINDO. File yang dipilih tidak diunggah.</p></article>
-          <article class="panel mouth-panel"><div class="panel-title"><div><p class="eyebrow">AMATI POSISI DAN GERAK</p><h3>Visualisasi mulut</h3></div><span class="panel-counter">02 / 04</span></div><div class="mouth-stage" id="mouth-stage" data-stage="0" aria-label="Ilustrasi sederhana posisi mulut">
+          <article class="panel mouth-panel">
+            <div class="panel-title">
+              <div><p class="eyebrow">AMATI POSISI DAN GERAK</p><h3>Visualisasi artikulasi mulut</h3></div>
+              <div class="mouth-vowel-tag" id="mouth-vowel-tag"><span>BENTUK</span> <strong id="mouth-vowel-badge-letter">A</strong></div>
+            </div>
+
+            <div class="vowel-quick-bar" role="group" aria-label="Eksplorasi bentuk vokal A I U E O">
+              <span class="vowel-bar-label">Vokal:</span>
+              <button type="button" class="vowel-chip active" data-vowel-choice="A" aria-label="Bentuk vokal A"><strong>A</strong><small>Buka Lebar</small></button>
+              <button type="button" class="vowel-chip" data-vowel-choice="I" aria-label="Bentuk vokal I"><strong>I</strong><small>Melebar</small></button>
+              <button type="button" class="vowel-chip" data-vowel-choice="U" aria-label="Bentuk vokal U"><strong>U</strong><small>Membulat</small></button>
+              <button type="button" class="vowel-chip" data-vowel-choice="E" aria-label="Bentuk vokal E"><strong>E</strong><small>Buka Sedang</small></button>
+              <button type="button" class="vowel-chip" data-vowel-choice="O" aria-label="Bentuk vokal O"><strong>O</strong><small>Bulat Lonjong</small></button>
+            </div>
+
+            <div class="mouth-stage" id="mouth-stage" data-stage="0" aria-label="Ilustrasi artikulasi gerakan mulut">
               <div class="mouth-scene">
-                <svg class="mouth-illustration" viewBox="0 0 240 140" role="img" aria-labelledby="mouth-svg-title mouth-svg-description">
-                  <title id="mouth-svg-title">Ilustrasi gerakan bibir</title>
-                  <desc id="mouth-svg-description">Gambar sederhana bibir dari depan. Bentuk bukaan berubah mengikuti langkah latihan.</desc>
-                  <ellipse class="mouth-shadow" cx="120" cy="76" rx="100" ry="39"/>
-                  <path class="mouth-lip upper-lip" d="M20 70 Q58 39 92 56 Q108 63 120 68 Q132 63 148 56 Q182 39 220 70 Q180 75 148 72 Q132 70 120 70 Q108 70 92 72 Q60 75 20 70Z"/>
-                  <path class="mouth-lip lower-lip" d="M20 70 Q58 101 92 84 Q108 77 120 72 Q132 77 148 84 Q182 101 220 70 Q180 65 148 68 Q132 70 120 70 Q108 70 92 68 Q60 65 20 70Z"/>
-                  <g class="mouth-opening-group">
-                    <path class="mouth-cavity" d="M28 70 Q120 32 212 70 Q120 108 28 70Z"/>
-                    <path class="mouth-teeth" d="M67 66 Q120 55 173 66 L169 78 Q120 72 71 78Z"/>
-                    <path class="mouth-tongue" d="M79 83 Q120 70 161 83 Q145 96 120 95 Q95 96 79 83Z"/>
+                <svg class="mouth-illustration" id="mouth-svg" viewBox="0 0 260 160" role="img" aria-labelledby="mouth-svg-title mouth-svg-description">
+                  <title id="mouth-svg-title">Ilustrasi artikulasi bentuk mulut</title>
+                  <desc id="mouth-svg-description">Gambar visualisasi bentuk bibir, rongga mulut, lidah, dan gigi saat melafalkan vokal dan konsonan.</desc>
+                  <defs>
+                    <radialGradient id="mouth-cavity-radial" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#240710"/>
+                      <stop offset="65%" stop-color="#421321"/>
+                      <stop offset="100%" stop-color="#601e30"/>
+                    </radialGradient>
+                    <linearGradient id="mouth-lip-upper-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#df6474"/>
+                      <stop offset="100%" stop-color="#c14454"/>
+                    </linearGradient>
+                    <linearGradient id="mouth-lip-lower-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#e97b8c"/>
+                      <stop offset="100%" stop-color="#cb4e60"/>
+                    </linearGradient>
+                    <linearGradient id="mouth-tongue-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#f58a98"/>
+                      <stop offset="100%" stop-color="#d65768"/>
+                    </linearGradient>
+                    <linearGradient id="mouth-teeth-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#ffffff"/>
+                      <stop offset="100%" stop-color="#f0eae1"/>
+                    </linearGradient>
+                    <clipPath id="mouth-interior-clip">
+                      <ellipse id="mouth-clip-ellipse" cx="130" cy="77" rx="74" ry="28"/>
+                    </clipPath>
+                  </defs>
+
+                  <g class="mouth-face-contour">
+                    <ellipse class="mouth-skin-glow" cx="130" cy="80" rx="115" ry="65"/>
+                    <path class="mouth-philtrum" d="M123 16 L123 34 M137 16 L137 34"/>
+                    <g class="mouth-corners-group" id="mouth-corners-group">
+                      <circle class="mouth-corner-dot" cx="38" cy="76" r="3.2"/>
+                      <circle class="mouth-corner-dot" cx="222" cy="76" r="3.2"/>
+                      <path class="mouth-dimple" d="M35 70 Q31 76 35 82"/>
+                      <path class="mouth-dimple" d="M225 70 Q229 76 225 82"/>
+                    </g>
                   </g>
-                  <path class="lip-highlight" d="M49 64 Q76 48 98 62 M142 62 Q166 48 191 64"/>
+
+                  <g class="mouth-aperture-group" id="mouth-aperture-group" style="transform: scale(0.85, 0); opacity: 0;">
+                    <ellipse class="mouth-cavity-bg" id="mouth-cavity-bg" cx="130" cy="77" rx="76" ry="28" fill="url(#mouth-cavity-radial)"/>
+                    <g class="mouth-interior-clipped" clip-path="url(#mouth-interior-clip)">
+                      <g class="mouth-teeth-upper" id="mouth-teeth-upper" style="opacity: 0;">
+                        <path class="teeth-upper-base" d="M72 56 Q130 51 188 56 L184 72 Q130 67 76 72 Z" fill="url(#mouth-teeth-grad)"/>
+                        <path class="teeth-lines" d="M130 54 L130 70 M116 55 L116 70 M144 55 L144 70 M102 56 L102 69 M158 56 L158 69 M88 57 L88 68 M172 57 L172 68"/>
+                      </g>
+                      <g class="mouth-tongue-group" id="mouth-tongue-group" style="opacity: 0;">
+                        <path class="mouth-tongue-body" id="mouth-tongue-body" d="M76 84 Q130 67 184 84 Q163 112 130 111 Q97 112 76 84 Z" fill="url(#mouth-tongue-grad)"/>
+                        <path class="mouth-tongue-groove" d="M130 76 Q130 90 130 104"/>
+                      </g>
+                      <g class="mouth-teeth-lower" id="mouth-teeth-lower" style="opacity: 0;">
+                        <path class="teeth-lower-base" d="M82 82 Q130 79 178 82 L174 92 Q130 89 86 92 Z" fill="url(#mouth-teeth-grad)"/>
+                        <path class="teeth-lines" d="M130 81 L130 90 M116 82 L116 90 M144 82 L144 90 M102 82 L102 89 M158 82 L158 89"/>
+                      </g>
+                    </g>
+                  </g>
+
+                  <g class="mouth-upper-lip-group" id="mouth-upper-lip-group">
+                    <path class="mouth-lip upper-lip" id="mouth-upper-lip" d="M38 76 C66 46 95 34 118 35 C123 35.5 127 39.5 130 40 C133 39.5 137 35.5 142 35 C165 34 194 46 222 76 C190 75.5 160 77.2 130 77.2 C100 77.2 70 75.5 38 76 Z" fill="url(#mouth-lip-upper-grad)"/>
+                    <path class="lip-highlight upper-highlight" d="M66 48 C86 39 104 37 116 39 M144 39 C156 37 174 39 194 48"/>
+                  </g>
+
+                  <g class="mouth-lower-lip-group" id="mouth-lower-lip-group">
+                    <path class="mouth-lip lower-lip" id="mouth-lower-lip" d="M38 76 C70 75.5 100 76.5 130 76.5 C160 76.5 190 75.5 222 76 C195 106 160 117 130 117 C100 117 65 106 38 76 Z" fill="url(#mouth-lip-lower-grad)"/>
+                    <ellipse class="lip-highlight lower-highlight" cx="130" cy="103" rx="36" ry="5.5"/>
+                  </g>
+
+                  <g class="mouth-vocal-waves" id="mouth-vocal-waves">
+                    <path class="vocal-wave vocal-wave-1" d="M194 65 C205 70 205 82 194 87"/>
+                    <path class="vocal-wave vocal-wave-2" d="M206 58 C220 66 220 86 206 94"/>
+                    <path class="vocal-wave vocal-wave-3" d="M218 51 C235 62 235 90 218 101"/>
+                    <path class="vocal-wave vocal-wave-4" d="M230 44 C250 58 250 94 230 108"/>
+                    <path class="vocal-wave vocal-wave-5" d="M242 37 C265 54 265 98 242 115"/>
+                  </g>
                 </svg>
               </div>
-              <div class="mouth-stage-copy" aria-live="polite"><span class="mouth-stage-number" id="mouth-stage-number">LANGKAH 1</span><strong id="mouth-stage-title">Posisi siap</strong><small id="mouth-stage-description">Perhatikan bentuk bibir sebelum bergerak.</small></div>
+              <div class="mouth-stage-copy" aria-live="polite">
+                <span class="mouth-stage-number" id="mouth-stage-number">LANGKAH 1</span>
+                <strong id="mouth-stage-title">Posisi siap</strong>
+                <small id="mouth-stage-description">Kedua bibir tertutup rapat dan rileks sebelum mulai bersuara.</small>
+                <div class="mouth-shape-tag" id="mouth-shape-tag">Posisi: <span>Bibir Tertutup Rapat</span></div>
+              </div>
             </div>
-            <div class="mouth-sequence" role="group" aria-label="Pilih langkah visualisasi mulut"><button class="active" type="button" data-mouth-dot="0" aria-label="Lihat langkah 1: Siap" aria-pressed="true">1 <small>Siap</small></button><i aria-hidden="true">→</i><button type="button" data-mouth-dot="1" aria-label="Lihat langkah 2: Gerak" aria-pressed="false">2 <small>Gerak</small></button><i aria-hidden="true">→</i><button type="button" data-mouth-dot="2" aria-label="Lihat langkah 3: Amati" aria-pressed="false">3 <small>Amati</small></button></div>
-            <div class="media-controls mouth-controls"><button id="mouth-play" class="control-button"><span>▶</span> Putar urutan</button><button id="mouth-pause" class="control-button"><span>Ⅱ</span> Jeda</button><button id="mouth-reset" class="control-button"><span>↻</span> Ulang</button><button id="mouth-next" class="control-button" aria-label="Langkah berikutnya">Berikutnya →</button></div>
-            <div class="mouth-howto" aria-live="polite"><strong><span>👄</span> Cara menggerakkan bibir</strong><ol id="mouth-howto-list"></ol></div>
-            <p class="mouth-disclaimer">Ilustrasi skematis untuk membantu mengamati posisi. Bukan penilaian atau model anatomi presisi; ikuti arahan guru/terapis.</p></article>
+
+            <div class="mouth-sequence" role="group" aria-label="Pilih langkah visualisasi artikulasi mulut">
+              <button class="active" type="button" data-mouth-dot="0" aria-label="Lihat langkah 1: Siap" aria-pressed="true">1 <small>Siap</small></button>
+              <i aria-hidden="true">→</i>
+              <button type="button" data-mouth-dot="1" aria-label="Lihat langkah 2: Gerak" aria-pressed="false">2 <small>Gerak</small></button>
+              <i aria-hidden="true">→</i>
+              <button type="button" data-mouth-dot="2" aria-label="Lihat langkah 3: Suara" aria-pressed="false">3 <small>Suara</small></button>
+            </div>
+
+            <div class="media-controls mouth-controls">
+              <button id="mouth-play" class="control-button"><span>▶</span> Putar urutan</button>
+              <button id="mouth-pause" class="control-button"><span>Ⅱ</span> Jeda</button>
+              <button id="mouth-reset" class="control-button"><span>↻</span> Ulang</button>
+              <button id="mouth-next" class="control-button" aria-label="Langkah berikutnya">Berikutnya →</button>
+            </div>
+
+            <div class="mouth-howto" aria-live="polite">
+              <strong><span>👄</span> Cara menggerakkan bibir</strong>
+              <ol id="mouth-howto-list"></ol>
+            </div>
+
+            <p class="mouth-disclaimer">Ilustrasi artikulasi visual untuk membantu mengamati dan meniru bentuk mulut. Bukan penilaian atau model medis; ikuti bimbingan guru dan terapis.</p>
+          </article>
           <article class="panel pronunciation-panel"><div class="panel-title"><div><p class="eyebrow">PETUNJUK GERAK</p><h3>Cara pengucapan</h3></div><span class="panel-counter">03 / 04</span></div><div class="instruction-row"><div class="instruction-icon">👄</div><p id="pronunciation-text">Rapatkan kedua bibir, kemudian buka bibir secara perlahan.</p></div><div class="anatomy-list"><span>👄 Posisi bibir</span><span>〰 Aliran udara</span><span>↕ Gerak rahang</span></div><div class="slow-controls"><span>Kecepatan animasi</span><button class="speed-choice" data-speed="slow">🐢 Lambat</button><button class="speed-choice selected" data-speed="normal">▶ Normal</button></div></article>
           <article class="panel example-panel"><div class="panel-title"><div><p class="eyebrow">CONTOH SEHARI-HARI</p><h3>Kata & bentuk</h3></div><span class="panel-counter">04 / 04</span></div><div class="example-showcase"><div class="example-ball">⚽</div><div><span class="example-letter" id="example-letter">B</span><strong class="example-word" id="example-word">BOLA</strong><small>Kata target</small></div></div><button class="button button-primary full-button" id="detail-practice">Mulai latihan <span>→</span></button></article>
         </div>

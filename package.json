@@ -1,0 +1,24 @@
+{
+  "name": "denedu-1",
+  "version": "1.0.0",
+  "description": "Prototipe media pembelajaran artikulasi berbasis visual-taktil dengan tagline **Lihat → Tiru → Rasakan**. Website ini menggunakan HTML5, CSS3, dan Vanilla JavaScript tanpa framework, backend, atau database eksternal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fyeed/DenEdu-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Fyeed/DenEdu-1/issues"
+  },
+  "homepage": "https://github.com/Fyeed/DenEdu-1#readme",
+  "dependencies": {
+    "motion": "^14.0.0"
+  }
+}
