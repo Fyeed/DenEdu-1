@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Tumi, maskot DENTUM-EDU</title>
+  <desc id="desc">Karakter kecil ungu yang tersenyum, memakai syal kuning, dan memegang bintang.</desc>
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a18af0"/>
+      <stop offset="1" stop-color="#7254d2"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff9f1"/>
+      <stop offset="1" stop-color="#f8e9dc"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="158" cy="285" rx="94" ry="15" fill="#604bb0" opacity=".12"/>
+  <path d="M75 115 64 54c-2-13 13-21 23-12l39 34m119 39 12-61c3-13-12-22-22-13l-41 36" fill="#6b50ca" stroke="#493795" stroke-width="7" stroke-linejoin="round"/>
+  <path d="m77 90-5-33 28 27m119 4 7-34-30 28" fill="#ffad97"/>
+  <path d="M56 191c-3-66 34-117 102-120 68-3 111 42 112 106 1 60-38 99-106 103-65 4-105-26-108-89Z" fill="url(#body)" stroke="#493795" stroke-width="7"/>
+  <path d="M87 202c0-31 22-57 70-59 46-2 72 21 74 55 2 34-25 59-69 61-47 2-73-19-75-57Z" fill="url(#belly)"/>
+  <path d="M112 141c7-10 22-12 32-5m47-2c10-7 24-5 31 4" fill="none" stroke="#493795" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="128" cy="155" rx="7" ry="10" fill="#342952"/>
+  <ellipse cx="207" cy="152" rx="7" ry="10" fill="#342952"/>
+  <ellipse cx="106" cy="173" rx="12" ry="7" fill="#ff9d9b" opacity=".7"/>
+  <ellipse cx="228" cy="170" rx="12" ry="7" fill="#ff9d9b" opacity=".7"/>
+  <path d="M153 170c8 5 16 5 24-1m-19 2c-1 10 3 15 9 15" fill="none" stroke="#9a5577" stroke-width="6" stroke-linecap="round"/>
+  <path d="M153 197c12 14 32 13 43-2" fill="none" stroke="#8b456e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M93 220c23 14 52 21 82 19 25-2 46-9 64-20" fill="none" stroke="#efaa59" stroke-width="13" stroke-linecap="round"/>
+  <path d="m167 231-5 20 16-11" fill="#efaa59" stroke="#cc874b" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M67 204c-18 9-23 25-14 35 8 9 23 4 34-10m175-24c18 7 24 22 17 33-7 10-22 7-35-6" fill="#8a70e0" stroke="#493795" stroke-width="6" stroke-linecap="round"/>
+  <path d="m254 183 9 16 18 3-13 12 3 18-16-9-16 9 3-18-13-12 18-3Z" fill="#ffc65f" stroke="#d8953f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M106 266c-14 8-17 19-8 25 11 7 36 5 48-1m54-23c16 5 22 16 14 23-9 8-36 7-50 2" fill="#7254d2" stroke="#493795" stroke-width="6" stroke-linecap="round"/>
+  <path d="m66 112-7 11m202-13 7 11" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+  <path d="m42 154 5 9 10 2-8 7 2 10-9-5-9 5 2-10-8-7 10-2Z" fill="#ffc65f"/>
+  <circle cx="276" cy="91" r="5" fill="#ffad97"/>
+</svg>

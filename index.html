@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="DENTUM-EDU — media pembelajaran artikulasi berbasis visual-taktil.">
+  <title>DENTUM-EDU — Lihat, Tiru, Rasakan</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/core.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/materials.js" defer></script>
+  <script src="js/mouth.js" defer></script>
+  <script src="js/microphone.js" defer></script>
+  <script src="js/practice.js" defer></script>
+  <script src="js/waveform.js" defer></script>
+  <script src="js/haptics.js" defer></script>
+  <script src="js/progress.js" defer></script>
+  <script src="js/settings.js" defer></script>
+  <script src="js/companion.js" defer></script>
+  <script src="js/testing.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" data-page="beranda" aria-label="DENTUM-EDU, beranda">
+        <span class="brand-mark">D<span>•</span></span>
+        <span class="brand-name">DENTUM<small>EDU</small></span>
+      </a>
+      <p class="nav-label">MENU BELAJAR</p>
+      <nav class="main-nav">
+        <button class="nav-link active" data-page="beranda"><span>⌂</span> Beranda</button>
+        <button class="nav-link" data-page="materi"><span>▦</span> Materi</button>
+        <button class="nav-link" data-page="latihan"><span>◎</span> Latihan</button>
+        <button class="nav-link" data-page="progres"><span>▥</span> Progres</button>
+        <button class="nav-link" data-page="pendamping"><span>♧</span> Guru / Orang Tua</button>
+        <button class="nav-link" data-page="pengaturan"><span>⚙</span> Pengaturan</button>
+        <button class="nav-link" data-page="tentang"><span>ⓘ</span> Tentang</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-support"><span class="support-icon">✋</span><strong>Belajar bersama</strong><small>Setiap usaha itu berarti.</small></div>
+        <button class="nav-link test-link" data-page="uji"><span>⌕</span> Uji fitur</button>
+      </div>
+      <div class="sidebar-foot">DENTUM-EDU <span>v1.0 • Prototipe</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">D<span>•</span></span><b>DENTUM-EDU</b></div>
+        <div class="breadcrumb"><span>Ruang Belajar</span><span class="crumb-dot">/</span><strong id="current-page-name">Beranda</strong></div>
+        <div class="topbar-actions"><span class="today-chip">☀️ <span id="today-label">Hari yang cerah!</span></span><button class="avatar" data-page="pendamping" aria-label="Buka halaman pendamping">A</button></div>
+      </header>
+
+      <section class="page active" id="page-beranda" aria-labelledby="home-title">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> RUANG BELAJAR CERIA</div>
+            <h1 id="home-title">Belajar bunyi,<br><em>dengan caramu.</em></h1>
+            <p>Jelajahi bentuk mulut, bahasa isyarat, dan latihan seru bersama pendampingmu.</p>
+            <div class="hero-tagline">LIHAT <span>→</span> TIRU <span>→</span> RASAKAN</div>
+            <div class="hero-buttons"><button class="button button-primary" data-page="materi">Mulai belajar <span>→</span></button><button class="button button-soft" data-page="pendamping">Panduan pendamping</button></div>
+          </div>
+          <div class="hero-art">
+            <div class="sun-orbit"></div><div class="art-spark spark-a">✦</div><div class="art-spark spark-b">✧</div>
+            <div class="art-card note-one">👀 <span>Lihat</span></div>
+            <img class="hero-mascot" src="assets/images/dentum-mascot.svg" alt="Tumi, maskot ceria DENTUM-EDU berbentuk teman kecil berwarna ungu">
+            <div class="art-card note-two">✋ <span>Hebat!</span></div>
+            <span class="art-caption"><strong>Tumi</strong> siap belajar bareng kamu!</span>
+          </div>
+        </div>
+
+        <div class="section-heading"><div><p class="eyebrow">TIGA LANGKAH KECIL</p><h2>Belajar dengan <em>menyenangkan</em></h2></div><button class="text-link" data-page="materi">Lihat semua materi <span>→</span></button></div>
+        <div class="steps-grid">
+          <article class="step-card step-look"><div class="step-icon">👀</div><div class="step-number">01</div><h3>Lihat</h3><p>Amati bahasa isyarat dan bentuk mulut dengan saksama.</p><span class="step-decoration">〰</span></article>
+          <article class="step-card step-copy"><div class="step-icon">👄</div><div class="step-number">02</div><h3>Tiru</h3><p>Tirukan gerakan dan coba latihan sesuai kemampuanmu.</p><span class="step-decoration">✳</span></article>
+          <article class="step-card step-feel"><div class="step-icon">✋</div><div class="step-number">03</div><h3>Rasakan</h3><p>Lihat feedback visual dan simulasi getaran yang seru.</p><span class="step-decoration">⌁</span></article>
+        </div>
+        <div class="home-bottom-grid">
+          <article class="panel continue-panel"><div class="panel-title"><div><p class="eyebrow">LANJUTKAN PERJALANAN</p><h3>Latihan terakhir</h3></div><span class="round-icon">↗</span></div><div class="continue-content"><div class="letter-tile">B</div><div class="continue-info"><strong id="home-last-material">Huruf B</strong><span>Konsonan bilabial</span><div class="tiny-progress"><span id="home-progress-bar"></span></div></div><button class="button button-primary button-small" data-open-material="B">Lanjutkan</button></div></article>
+          <article class="quote-card"><span class="quote-mark">“</span><p>Tak perlu terburu-buru.<br><strong>Usaha kecilmu berarti.</strong></p><span class="quote-star">✦</span></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-materi" aria-labelledby="materials-title">
+        <div class="page-intro"><div><p class="eyebrow">PERPUSTAKAAN BELAJAR</p><h1 id="materials-title">Pilih <em>materimu</em></h1><p>Mulai dari yang sederhana. Kamu bisa kembali kapan saja.</p></div><div class="intro-illustration">📚<span>✦</span></div></div>
+        <div class="filter-row" role="group" aria-label="Filter kategori materi"><button class="filter-chip selected" data-filter="Semua">Semua <span id="count-all">67</span></button><button class="filter-chip" data-filter="Vokal">Vokal</button><button class="filter-chip" data-filter="Bilabial">Bilabial</button><button class="filter-chip" data-filter="Konsonan">Konsonan</button><button class="filter-chip" data-filter="Suku kata">Suku kata</button><button class="filter-chip" data-filter="Kata">Kata sederhana</button><button class="filter-chip" data-filter="Hewan">Hewan</button><button class="filter-chip starred-filter" data-filter="Ditandai">☆ Ditandai</button></div>
+        <div id="materials-grid" class="materials-grid"></div>
+        <div class="notice notice-info"><span>ⓘ</span><p><strong>Belajar sesuai ritmemu.</strong> Materi ditujukan untuk eksplorasi bersama pendamping.</p></div>
+      </section>
+
+      <section class="page" id="page-detail" aria-labelledby="detail-title">
+        <button class="back-link" data-page="materi">← Kembali ke materi</button>
+        <div class="detail-header"><div><p class="eyebrow" id="detail-category">KONSONAN BILABIAL</p><h1 id="detail-title">Belajar huruf <em>B</em></h1><p>Amati, pelajari, lalu coba bersama pendamping.</p></div><button class="star-button" id="detail-star" aria-label="Tandai materi">☆</button></div>
+        <div class="detail-grid">
+          <article class="panel sign-panel"><div class="panel-title"><div><p class="eyebrow">KOMUNIKASI VISUAL</p><h3>Foto / video isyarat</h3></div><span class="panel-counter">01 / 04</span></div><div class="sign-media-frame" id="sign-media-frame"><div class="sign-placeholder" id="sign-placeholder"><div class="sign-halo"></div><div class="sign-person"><div class="sign-head">🙂</div><div class="sign-body">🙌</div></div><span class="placeholder-label">Media gerakan belum ditambahkan</span></div><img id="sign-image" alt="" hidden><video id="sign-video" controls playsinline preload="metadata" aria-label="Video contoh gerakan bahasa isyarat" hidden></video></div><div class="segmented" role="group" aria-label="Pilihan bahasa isyarat"><button class="selected" data-sign="SIBI">SIBI</button><button data-sign="BISINDO">BISINDO</button></div><label class="sign-upload" for="sign-media-file"><span>＋</span><span><strong id="sign-upload-label">Tambahkan foto/video isyarat</strong><small>JPG, PNG, WebP, MP4, atau WebM · hanya di perangkat ini</small></span></label><input class="visually-hidden" id="sign-media-file" type="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/webm"><p class="caption" id="sign-media-caption">Media perlu divalidasi oleh penutur/pengajar SIBI atau BISINDO. File yang dipilih tidak diunggah.</p></article>
+          <article class="panel mouth-panel"><div class="panel-title"><div><p class="eyebrow">AMATI POSISI DAN GERAK</p><h3>Visualisasi mulut</h3></div><span class="panel-counter">02 / 04</span></div><div class="mouth-stage" id="mouth-stage" data-stage="0" aria-label="Ilustrasi sederhana posisi mulut">
+              <div class="mouth-scene">
+                <svg class="mouth-illustration" viewBox="0 0 240 140" role="img" aria-labelledby="mouth-svg-title mouth-svg-description">
+                  <title id="mouth-svg-title">Ilustrasi gerakan bibir</title>
+                  <desc id="mouth-svg-description">Gambar sederhana bibir dari depan. Bentuk bukaan berubah mengikuti langkah latihan.</desc>
+                  <ellipse class="mouth-shadow" cx="120" cy="76" rx="100" ry="39"/>
+                  <path class="mouth-lip upper-lip" d="M20 70 Q58 39 92 56 Q108 63 120 68 Q132 63 148 56 Q182 39 220 70 Q180 75 148 72 Q132 70 120 70 Q108 70 92 72 Q60 75 20 70Z"/>
+                  <path class="mouth-lip lower-lip" d="M20 70 Q58 101 92 84 Q108 77 120 72 Q132 77 148 84 Q182 101 220 70 Q180 65 148 68 Q132 70 120 70 Q108 70 92 68 Q60 65 20 70Z"/>
+                  <g class="mouth-opening-group">
+                    <path class="mouth-cavity" d="M28 70 Q120 32 212 70 Q120 108 28 70Z"/>
+                    <path class="mouth-teeth" d="M67 66 Q120 55 173 66 L169 78 Q120 72 71 78Z"/>
+                    <path class="mouth-tongue" d="M79 83 Q120 70 161 83 Q145 96 120 95 Q95 96 79 83Z"/>
+                  </g>
+                  <path class="lip-highlight" d="M49 64 Q76 48 98 62 M142 62 Q166 48 191 64"/>
+                </svg>
+              </div>
+              <div class="mouth-stage-copy" aria-live="polite"><span class="mouth-stage-number" id="mouth-stage-number">LANGKAH 1</span><strong id="mouth-stage-title">Posisi siap</strong><small id="mouth-stage-description">Perhatikan bentuk bibir sebelum bergerak.</small></div>
+            </div>
+            <div class="mouth-sequence" role="group" aria-label="Pilih langkah visualisasi mulut"><button class="active" type="button" data-mouth-dot="0" aria-label="Lihat langkah 1: Siap" aria-pressed="true">1 <small>Siap</small></button><i aria-hidden="true">→</i><button type="button" data-mouth-dot="1" aria-label="Lihat langkah 2: Gerak" aria-pressed="false">2 <small>Gerak</small></button><i aria-hidden="true">→</i><button type="button" data-mouth-dot="2" aria-label="Lihat langkah 3: Amati" aria-pressed="false">3 <small>Amati</small></button></div>
+            <div class="media-controls mouth-controls"><button id="mouth-play" class="control-button"><span>▶</span> Putar urutan</button><button id="mouth-pause" class="control-button"><span>Ⅱ</span> Jeda</button><button id="mouth-reset" class="control-button"><span>↻</span> Ulang</button><button id="mouth-next" class="control-button" aria-label="Langkah berikutnya">Berikutnya →</button></div>
+            <div class="mouth-howto" aria-live="polite"><strong><span>👄</span> Cara menggerakkan bibir</strong><ol id="mouth-howto-list"></ol></div>
+            <p class="mouth-disclaimer">Ilustrasi skematis untuk membantu mengamati posisi. Bukan penilaian atau model anatomi presisi; ikuti arahan guru/terapis.</p></article>
+          <article class="panel pronunciation-panel"><div class="panel-title"><div><p class="eyebrow">PETUNJUK GERAK</p><h3>Cara pengucapan</h3></div><span class="panel-counter">03 / 04</span></div><div class="instruction-row"><div class="instruction-icon">👄</div><p id="pronunciation-text">Rapatkan kedua bibir, kemudian buka bibir secara perlahan.</p></div><div class="anatomy-list"><span>👄 Posisi bibir</span><span>〰 Aliran udara</span><span>↕ Gerak rahang</span></div><div class="slow-controls"><span>Kecepatan animasi</span><button class="speed-choice" data-speed="slow">🐢 Lambat</button><button class="speed-choice selected" data-speed="normal">▶ Normal</button></div></article>
+          <article class="panel example-panel"><div class="panel-title"><div><p class="eyebrow">CONTOH SEHARI-HARI</p><h3>Kata & bentuk</h3></div><span class="panel-counter">04 / 04</span></div><div class="example-showcase"><div class="example-ball">⚽</div><div><span class="example-letter" id="example-letter">B</span><strong class="example-word" id="example-word">BOLA</strong><small>Kata target</small></div></div><button class="button button-primary full-button" id="detail-practice">Mulai latihan <span>→</span></button></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-latihan" aria-labelledby="practice-title">
+        <div class="page-intro practice-intro"><div><p class="eyebrow">WAKTUNYA MENCOBA</p><h1 id="practice-title">Latihan <em>bersama</em></h1><p>Ikuti aktivitas suara dengan cara yang nyaman untukmu.</p></div><div class="practice-sticker">✨<small>YOU<br>CAN!</small></div></div>
+        <div class="practice-layout">
+          <div class="practice-main">
+            <div class="practice-target panel"><div class="target-letter" id="practice-letter">B</div><div class="target-copy"><p class="eyebrow">MATERI SAAT INI</p><h2 id="practice-word">BOLA</h2><span class="target-category" id="practice-category">Konsonan bilabial</span></div><button class="text-link" id="change-target">Ganti materi ↗</button></div>
+            <div class="panel sensor-panel"><div class="panel-title"><div><p class="eyebrow">PANTAU AKTIVITAS</p><h3>Sensor aktivitas suara</h3></div><span class="privacy-lock">▣ Audio tidak disimpan</span></div>
+              <div class="sensor-status waiting" id="sensor-status" aria-live="polite"><span class="status-symbol" id="status-symbol">◌</span><div><strong id="status-title">MENUNGGU</strong><small id="status-description">Tekan mulai saat kamu siap</small></div><span class="status-wave"></span></div>
+              <div class="meter-area"><div class="meter-reading"><strong id="meter-value">0</strong><span>%</span></div><div class="meter-track"><div class="meter-fill" id="meter-fill"></div><div class="meter-zones"><span>Terlalu pelan</span><span>Baik</span><span>Terlalu keras</span></div></div></div>
+              <div class="waveform-wrap"><div class="wave-label"><span>WAVEFORM AKTIVITAS</span><span id="wave-label-state">MENUNGGU INPUT</span></div><canvas id="waveform" aria-label="Visualisasi aktivitas suara secara real-time"></canvas></div>
+              <div class="feedback-box" id="feedback-box"><span class="feedback-icon" id="feedback-icon">🎙</span><div><strong id="feedback-title">Silakan mulai ketika siap.</strong><small id="feedback-description">Layar akan menampilkan aktivitas, bukan ketepatan bunyi.</small></div><span class="feedback-stars" id="feedback-stars"></span></div>
+              <div class="practice-actions"><button class="button button-primary record-button" id="record-button"><span>🎙</span> Mulai rekam</button><button class="button button-outline simulate-button" id="simulate-button" aria-label="Tekan dan tahan untuk simulasi suara"><span>✋</span> Simulasikan suara <small>tekan & tahan</small></button><button class="stop-button" id="stop-button" hidden>Selesaikan latihan</button></div>
+              <p class="privacy-note">Mikrofon hanya aktif setelah kamu menekan “Mulai rekam”. Audio tidak disimpan atau dikirim ke server.</p>
+            </div>
+            <div class="notice notice-warning"><span>ⓘ</span><p><strong>Informasi penting:</strong> Sistem hanya mendeteksi aktivitas suara, kekuatan, dan durasi vokalisasi. Sistem tidak menilai ketepatan bunyi atau fonem.</p></div>
+          </div>
+          <aside class="practice-side">
+            <div class="panel preview-panel"><div class="panel-title"><div><p class="eyebrow">SEBELUM MULAI</p><h3>Ingat targetmu</h3></div></div><div class="preview-items"><div class="preview-item"><span>🙌</span><div><strong>Bahasa isyarat</strong><small id="preview-sign">SIBI · Huruf B</small></div><span>✓</span></div><div class="preview-item"><span>👄</span><div><strong>Bentuk mulut</strong><small>Amati gerak bibir</small></div><span>✓</span></div><div class="preview-item"><span>🎯</span><div><strong>Kata target</strong><small id="preview-word">BOLA</small></div><span>✓</span></div></div><button class="text-link" data-page="detail">Lihat materi lengkap ↗</button></div>
+            <div class="haptic-card" id="haptic-card"><div class="haptic-top"><span class="haptic-hand" id="haptic-hand">✋</span><span class="haptic-badge">FEEDBACK TAKTIL</span></div><h3>Simulasi haptik</h3><p id="haptic-message">Getaran lembut memberi tanda saat aktivitas suara terdeteksi.</p><div class="haptic-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small id="haptic-support">Dukungan getar bergantung pada perangkat.</small></div>
+            <div class="count-card"><span>⭐</span><div><strong><b id="success-count">0</b> deteksi</strong><small>Usaha hebat hari ini!</small></div></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-progres" aria-labelledby="progress-title">
+        <div class="page-intro"><div><p class="eyebrow">SEMUA USAHAMU BERARTI</p><h1 id="progress-title">Jejak <em>kemajuan</em></h1><p>Rayakan setiap langkah kecil yang sudah kamu coba.</p></div><div class="intro-illustration">🏆<span>✦</span></div></div>
+        <div class="stats-grid"><article class="stat-card stat-purple"><span class="stat-icon">▦</span><small>Materi selesai</small><strong id="stat-completed">0</strong><span>dari <b id="total-materials">57</b> materi</span></article><article class="stat-card stat-orange"><span class="stat-icon">◎</span><small>Jumlah percobaan</small><strong id="stat-attempts">0</strong><span>setiap usaha berarti</span></article><article class="stat-card stat-green"><span class="stat-icon">✦</span><small>Aktivitas terdeteksi</small><strong id="stat-detections">0</strong><span>bukan penilaian fonem</span></article><article class="stat-card stat-blue"><span class="stat-icon">☆</span><small>Bintang terkumpul</small><strong id="stat-stars">0</strong><span>terus semangat!</span></article></div>
+        <div class="progress-columns"><article class="panel"><div class="panel-title"><div><p class="eyebrow">PERJALANAN BELAJARMU</p><h3>Materi yang dijelajahi</h3></div><button class="text-link" data-page="materi">Lihat semua</button></div><div id="progress-material-list" class="progress-material-list"></div></article><article class="panel achievements-panel"><div class="panel-title"><div><p class="eyebrow">LENCANA KECIL</p><h3>Achievement</h3></div><span class="panel-counter">✧</span></div><div id="achievement-list" class="achievement-list"></div></article></div>
+        <div class="notice notice-info"><span>✦</span><p>Progres disimpan hanya di perangkat ini menggunakan penyimpanan lokal browser.</p></div>
+      </section>
+
+      <section class="page" id="page-pendamping" aria-labelledby="companion-title">
+        <div class="page-intro"><div><p class="eyebrow">RUANG UNTUK PENDAMPING</p><h1 id="companion-title">Tumbuh <em>bersama</em></h1><p>Informasi untuk membantu mendampingi proses belajar anak.</p></div><div class="intro-illustration">🤝<span>✦</span></div></div>
+        <div class="companion-grid"><article class="panel summary-panel"><div class="panel-title"><div><p class="eyebrow">RINGKASAN PROGRES</p><h3>Aktivitas belajar</h3></div><span class="round-icon">▥</span></div><div class="summary-stat-row"><div><small>Jumlah percobaan</small><strong id="comp-attempts">0</strong></div><div><small>Materi selesai</small><strong id="comp-completed">0</strong></div><div><small>Deteksi aktivitas</small><strong id="comp-detections">0</strong></div></div><div class="last-practice"><span>📌</span><div><small>Materi terakhir</small><strong id="comp-last">Belum ada latihan</strong></div><span id="comp-date">—</span></div></article>
+          <article class="positive-card"><span class="positive-icon">💛</span><p>“Dampingi anak selama latihan dan berikan <strong>penguatan positif</strong>.”</p><small>Setiap anak belajar dengan ritmenya sendiri.</small></article>
+        </div>
+        <div class="companion-lower"><article class="panel guidance-panel"><p class="eyebrow">PANDUAN SINGKAT</p><h3>Hadir, amati, apresiasi.</h3><ul class="guidance-list"><li><span>01</span><p>Pastikan anak merasa nyaman dan siap sebelum latihan.</p></li><li><span>02</span><p>Tunjukkan contoh visual, lalu beri waktu untuk mencoba.</p></li><li><span>03</span><p>Apresiasi usaha, bukan hanya hasil yang terlihat.</p></li></ul><div class="notice notice-warning"><span>ⓘ</span><p>Gunakan DENTUM-EDU sebagai media pendukung, bukan sebagai pengganti guru atau terapis.</p></div></article>
+          <article class="panel advanced-panel"><div class="panel-title"><div><p class="eyebrow">PREFERENSI LATIHAN</p><h3>Pengaturan pendamping</h3></div><span class="lock-mark">▣</span></div><p>Sesuaikan pengalaman latihan bersama anak.</p><div class="advanced-row"><span>Sensitivitas sensor</span><strong id="comp-sensitivity">Sedang</strong></div><div class="advanced-row"><span>Durasi minimum</span><strong id="comp-duration">300 ms</strong></div><div class="advanced-row"><span>Bahasa isyarat</span><strong id="comp-sign">SIBI</strong></div><button class="button button-outline full-button" id="advanced-settings">Kelola pengaturan</button></article></div>
+      </section>
+
+      <section class="page" id="page-pengaturan" aria-labelledby="settings-title">
+        <div class="page-intro"><div><p class="eyebrow">ATUR RUANG BELAJARMU</p><h1 id="settings-title">Pengaturan <em>pribadi</em></h1><p>Sesuaikan pengalaman belajar agar terasa nyaman.</p></div><div class="intro-illustration">⚙️<span>✦</span></div></div>
+        <div class="settings-grid">
+          <article class="panel settings-panel"><div class="panel-title"><div><p class="eyebrow">SENSOR AKTIVITAS</p><h3>Deteksi suara</h3></div><span class="settings-icon">〰</span></div><label class="setting-label" for="sensitivity-input"><span>Sensitivitas</span><strong id="sensitivity-label">Sedang</strong></label><input id="sensitivity-input" type="range" min="1" max="5" value="3"><div class="range-labels"><span>Kurang sensitif</span><span>Lebih sensitif</span></div><label class="setting-label duration-label" for="duration-input"><span>Durasi minimum deteksi</span><strong><output id="duration-output">300</output> ms</strong></label><input id="duration-input" type="range" min="150" max="1000" step="50" value="300"><button class="button button-outline full-button" id="calibrate-button">↻ Kalibrasi ulang</button><small class="setting-footnote">Threshold dihitung dari noise lingkungan + sensitivitas.</small></article>
+          <article class="panel settings-panel"><div class="panel-title"><div><p class="eyebrow">FEEDBACK TAKTIL</p><h3>Haptik</h3></div><span class="settings-icon">✋</span></div><div class="setting-toggle-row"><div><strong>Simulasi getaran</strong><small>Gunakan getar jika didukung perangkat</small></div><button class="toggle-switch" id="haptic-toggle" role="switch" aria-checked="true" aria-label="Aktifkan simulasi getaran"><span></span></button></div><p class="setting-label haptic-strength-label"><span>Kekuatan getaran</span></p><div class="radio-options"><label><input type="radio" name="haptic-strength" value="low"><span>○ Rendah</span></label><label><input type="radio" name="haptic-strength" value="medium" checked><span>● Sedang</span></label><label><input type="radio" name="haptic-strength" value="high"><span>○ Tinggi</span></label></div><button class="button button-outline full-button" id="test-vibration">〰 Uji getaran</button><div class="haptic-fallback" id="haptic-fallback" hidden><span>✋</span><div><strong>Simulasi haptik visual</strong><small>Perangkat tidak mendukung getaran. Gunakan animasi visual sebagai feedback.</small></div></div></article>
+          <article class="panel settings-panel"><div class="panel-title"><div><p class="eyebrow">AKSESIBILITAS</p><h3>Tampilan nyaman</h3></div><span class="settings-icon">◉</span></div><p class="setting-label"><span>Ukuran teks</span></p><div class="text-size-options" role="group" aria-label="Ukuran teks"><button data-text-size="s">S</button><button class="selected" data-text-size="m">M</button><button data-text-size="l">L</button><button data-text-size="xl">XL</button></div><div class="setting-toggle-row"><div><strong>Kontras tinggi</strong><small>Perjelas perbedaan elemen</small></div><button class="toggle-switch" id="contrast-toggle" role="switch" aria-checked="false" aria-label="Kontras tinggi"><span></span></button></div><div class="setting-toggle-row"><div><strong>Kurangi animasi</strong><small>Minimalkan gerakan dekoratif</small></div><button class="toggle-switch" id="motion-toggle" role="switch" aria-checked="false" aria-label="Kurangi animasi"><span></span></button></div></article>
+          <article class="panel settings-panel"><div class="panel-title"><div><p class="eyebrow">PREFERENSI</p><h3>Tampilan & bahasa</h3></div><span class="settings-icon">☼</span></div><p class="setting-label"><span>Tema tampilan</span></p><div class="theme-options"><button data-theme="light" class="selected">☀ Terang</button><button data-theme="dark">☾ Gelap</button></div><p class="setting-label sign-label"><span>Bahasa isyarat</span></p><div class="segmented sign-setting" role="group" aria-label="Pilihan bahasa isyarat"><button class="selected" data-setting-sign="SIBI">SIBI</button><button data-setting-sign="BISINDO">BISINDO</button></div><p class="setting-footnote">Ketersediaan bentuk isyarat dapat berbeda menurut wilayah dan komunitas.</p></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-tentang" aria-labelledby="about-title">
+        <div class="page-intro"><div><p class="eyebrow">KENALI MEDIA BELAJARMU</p><h1 id="about-title">Tentang <em>DENTUM-EDU</em></h1><p>Lihat → Tiru → Rasakan</p></div><div class="intro-illustration">💫<span>✦</span></div></div>
+        <article class="about-hero panel"><div class="about-mark">D<span>•</span></div><div><p class="eyebrow">MEDIA PEMBELAJARAN VISUAL-TAKTIL</p><h2>Belajar artikulasi dengan<br>lebih banyak cara.</h2><p>DENTUM-EDU adalah media pembelajaran berbasis website yang mendukung latihan artikulasi anak tunarungu melalui pendekatan visual-taktil.</p></div></article>
+        <article class="panel innovation-panel"><div class="panel-title"><div><p class="eyebrow">CARA KAMI MENGHUBUNGKAN</p><h3>Satu pengalaman, banyak indera</h3></div></div><div class="innovation-flow"><div><span>▦</span><strong>Materi<br>artikulasi</strong></div><b>+</b><div><span>🙌</span><strong>Bahasa<br>isyarat</strong></div><b>+</b><div><span>👄</span><strong>Visualisasi<br>mulut</strong></div><b>+</b><div><span>◎</span><strong>Latihan<br>vokalisasi</strong></div><b>+</b><div><span>✦</span><strong>Feedback<br>visual</strong></div><b>+</b><div><span>✋</span><strong>Simulasi<br>haptik</strong></div></div></article>
+        <article class="boundary-panel"><div class="boundary-heading"><span>ⓘ</span><div><p class="eyebrow">BATASAN SISTEM</p><h3>Dirancang sebagai pendamping belajar.</h3></div></div><ul><li>DENTUM-EDU bukan alat diagnosis.</li><li>DENTUM-EDU tidak menilai ketepatan bunyi atau fonem.</li><li>Sistem hanya mendeteksi aktivitas suara, kekuatan, dan durasi vokalisasi.</li><li>DENTUM-EDU merupakan media pendukung pembelajaran dan bukan pengganti guru, orang tua, atau terapis.</li></ul></article>
+        <div class="notice notice-info"><span>▣</span><p>Audio tidak disimpan. Analisis aktivitas suara berlangsung di browser pada perangkat pengguna.</p></div>
+      </section>
+
+      <section class="page" id="page-uji" aria-labelledby="test-title">
+        <div class="page-intro"><div><p class="eyebrow">AREA DEMONSTRASI</p><h1 id="test-title">Uji <em>fitur</em></h1><p>Periksa dukungan browser dan coba komponen prototipe.</p></div><div class="intro-illustration">🧪<span>✦</span></div></div>
+        <div class="test-grid"><article class="panel api-panel"><div class="panel-title"><div><p class="eyebrow">KOMPATIBILITAS</p><h3>Dukungan API browser</h3></div></div><div id="api-status-list" class="api-status-list"></div></article><article class="panel test-buttons"><div class="panel-title"><div><p class="eyebrow">COBA LANGSUNG</p><h3>Pengujian cepat</h3></div></div><button class="button button-outline full-button" id="test-microphone">🎙 Uji mikrofon</button><button class="button button-outline full-button" id="test-vibration-page">〰 Uji getar</button><button class="button button-outline full-button" id="test-animation">✦ Uji animasi</button><button class="button button-outline full-button" id="test-waveform">〰 Uji waveform</button><p class="test-feedback" id="test-feedback" aria-live="polite">Pilih fitur untuk menjalankan pengujian.</p></article>
+          <article class="panel checklist-panel"><div class="panel-title"><div><p class="eyebrow">CHECKLIST DEMONSTRASI</p><h3>Daftar uji mandiri</h3></div></div><div class="checklist-grid" id="test-checklist"></div></article>
+          <article class="panel notes-panel"><div class="panel-title"><div><p class="eyebrow">CATATAN</p><h3>Hasil pengujian</h3></div></div><label class="visually-hidden" for="test-notes">Catatan pengujian</label><textarea id="test-notes" rows="5" placeholder="Tulis catatan pengujian di sini..."></textarea><button class="button button-primary full-button" id="export-results">⇩ Ekspor hasil (.txt)</button><small>Catatan disimpan lokal di browser.</small></article></div>
+      </section>
+
+      <footer class="main-footer"><span>© 2025 DENTUM-EDU · Media pendukung pembelajaran</span><span>Belajar dengan hati <b>♥</b></span></footer>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="Navigasi bawah"><button class="active" data-page="beranda"><span>⌂</span><small>Beranda</small></button><button data-page="materi"><span>▦</span><small>Materi</small></button><button data-page="latihan"><span>◎</span><small>Latihan</small></button><button data-page="progres"><span>▥</span><small>Progres</small></button><button data-page="pendamping"><span>♧</span><small>Pendamping</small></button><button data-page="pengaturan"><span>⚙</span><small>Atur</small></button><button data-page="tentang"><span>ⓘ</span><small>Tentang</small></button><button data-page="uji"><span>⌕</span><small>Uji</small></button></nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="pin-dialog" class="pin-dialog"><form method="dialog"><button class="dialog-close" aria-label="Tutup">×</button><span class="dialog-icon">🔒</span><p class="eyebrow">RUANG PENDAMPING</p><h2>Konfirmasi pendamping</h2><p>Masukkan PIN sederhana <strong>1234</strong> untuk membuka pengaturan lanjutan.</p><label for="pin-input">PIN pendamping</label><input id="pin-input" type="password" inputmode="numeric" maxlength="4" placeholder="••••"><p class="pin-error" id="pin-error" aria-live="polite"></p><button class="button button-primary full-button" id="pin-submit" value="confirm">Lanjutkan</button><button class="dialog-cancel" value="cancel">Batal</button></form></dialog>
+</body>
+</html>
