@@ -116,6 +116,7 @@ function renderSignMedia() {
   const video = document.getElementById('sign-video');
   const caption = document.getElementById('sign-media-caption');
   const uploadLabel = document.getElementById('sign-upload-label');
+  renderSignGuide();
   const source = file ? { type: file.type.startsWith('image/') ? 'image' : 'video', url: signMediaUrls.get(key), name: file.name } : bundled;
   const nextUrl = source ? source.url : '';
   if (activeSignMediaUrl && activeSignMediaUrl !== nextUrl) {
@@ -147,6 +148,31 @@ function renderSignMedia() {
     ? `${file.name} · pratinjau lokal untuk ${settings.signLanguage}. Pastikan gerakan telah divalidasi.`
     : `Media paket · ${settings.signLanguage}. Pastikan gerakan telah divalidasi oleh pendamping.`;
 }
+
+const SIGN_GUIDE_KEY = 'dentumSignGuides';
+let signGuides = readStored(SIGN_GUIDE_KEY, {});
+if (!signGuides || typeof signGuides !== 'object' || Array.isArray(signGuides)) signGuides = {};
+
+function renderSignGuide() {
+  const language = settings.signLanguage;
+  const guide = signGuides[signMediaKey()] || '';
+  document.getElementById('sign-guide-title').textContent = `Cara gerakan ${language}`;
+  document.getElementById('sign-guide-context').textContent = `Materi: ${selectedMaterial.name} · Bahasa isyarat: ${language}`;
+  document.getElementById('sign-guide-input').value = guide;
+  document.getElementById('sign-guide-status').textContent = guide
+    ? 'Panduan untuk materi dan bahasa ini sudah tersimpan di perangkat.'
+    : `Belum ada panduan ${language} tervalidasi untuk materi ini.`;
+}
+
+document.getElementById('save-sign-guide').addEventListener('click', () => {
+  const key = signMediaKey();
+  const description = document.getElementById('sign-guide-input').value.trim();
+  if (description) signGuides[key] = description;
+  else delete signGuides[key];
+  if (!writeStored(SIGN_GUIDE_KEY, signGuides)) return;
+  renderSignGuide();
+  showToast(description ? 'Panduan gerakan berhasil disimpan.' : 'Panduan gerakan dihapus.');
+});
 
 async function loadBundledSignMedia(key) {
   checkedBundledSignMedia.add(key);
@@ -203,4 +229,3 @@ document.getElementById('sign-media-file').addEventListener('change', event => {
 window.addEventListener('beforeunload', () => {
   signMediaUrls.forEach(url => URL.revokeObjectURL(url));
 });
-
