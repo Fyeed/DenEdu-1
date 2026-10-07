@@ -49,6 +49,8 @@ Logika dipisahkan menjadi file per fitur di folder `js/`. Semua file dimuat seba
 
 Pada halaman detail materi, pilih **SIBI** atau **BISINDO**, lalu gunakan **Tambahkan foto/video isyarat** untuk mempratinjau file lokal (JPG, PNG, WebP, MP4, atau WebM; maksimal 20 MB). File yang dipilih hanya tersedia di tab browser saat itu dan tidak diunggah atau disimpan.
 
+Di bawah media ada kolom **Cara gerakan** yang mengikuti materi dan bahasa isyarat yang dipilih. Pendamping dapat menuliskan deskripsi gerakan berdasarkan media yang sudah divalidasi, lalu menekan **Simpan panduan**. Setiap deskripsi disimpan di `localStorage` berdasarkan pasangan materi dan bahasa, misalnya `BISINDO:BOLA`, sehingga panduan BISINDO tidak tertukar dengan SIBI atau materi lain. Prototipe tidak mengisi deskripsi isyarat otomatis karena BISINDO bervariasi menurut wilayah/komunitas; deskripsi harus diperiksa penutur atau pendidik BISINDO.
+
 Agar media ikut tersedia setiap kali prototipe dibuka melalui Live Server, letakkan media yang telah mendapat izin penggunaan dan divalidasi penutur/pengajar di folder aset dengan nama berikut:
 
 - Video: `assets/videos/isyarat/<id-materi>-<bahasa>.mp4` atau `.webm`
